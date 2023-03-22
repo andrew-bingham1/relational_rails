@@ -7,6 +7,8 @@ class CreatePlanets < ActiveRecord::Migration[5.2]
       t.integer :num_moons
       t.boolean :has_life
       t.references :star, foreign_key: true
+
+      t.timestamps
     end
   end
 end

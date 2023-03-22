@@ -22,15 +22,19 @@ ActiveRecord::Schema.define(version: 2023_03_22_001926) do
     t.integer "num_moons"
     t.boolean "has_life"
     t.bigint "star_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["star_id"], name: "index_planets_on_star_id"
   end
 
   create_table "stars", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "star_type"
     t.float "age"
-    t.float "size"
+    t.string "size"
     t.boolean "can_nova"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "planets", "stars"
