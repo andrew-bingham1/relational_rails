@@ -1,7 +1,7 @@
 ## User Stories
 
  
-User Story 1, Parent Index [ ] done
+User Story 1, Parent Index [x] done
 
 For each parent table
 As a visitor
