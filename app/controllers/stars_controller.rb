@@ -1,6 +1,6 @@
 class StarsController < ApplicationController
   def index
-    @stars = Star.all
+    @stars = Star.order_by
   end
 
   def show

@@ -1,11 +1,5 @@
 require 'rails_helper'
-# User Story 3, Child Index [x] done
-
-# As a visitor
-# When I visit '/child_table_name'
-# Then I see each Child in the system including the Child's attributes
-# (data from each column that is on the child table)
-
+# User Story 3, Child Index
 RSpec.describe '/planets' do
   describe 'as a visitor when vist "/planets" I see the index page' do
     let!(:star_1) {Star.create! name: "Sol", star_type: "yellow dwarf star", age: 4.6, size: "1.9885 to 10^30 kg", can_nova: false}

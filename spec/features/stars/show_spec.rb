@@ -1,11 +1,5 @@
 require 'rails_helper'
-# User Story 2, Parent Show [ ] done
-
-# As a visitor
-# When I visit '/parents/:id'
-# Then I see the parent with that id including the parent's attributes
-# (data from each column that is on the parent table)
-
+# User Story 2, Parent Show 
 RSpec.describe '/stars/:id', type: :feature do
   describe 'as a visitor when I vist "/stars/:id" I see the show page' do
     let!(:star_1) {Star.create! name: "Sol", star_type: "yellow dwarf star", age: 4.6, size: "1.9885 to 10^30 kg", can_nova: false}
