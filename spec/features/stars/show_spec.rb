@@ -6,7 +6,7 @@ require 'rails_helper'
 # Then I see the parent with that id including the parent's attributes
 # (data from each column that is on the parent table)
 
-RSpec.describe 'stars show page' do
+RSpec.describe '/stars/:id', type: :feature do
   describe 'as a visitor when I vist "/stars/:id" I see the show page' do
     let!(:star_1) {Star.create! name: "Sol", star_type: "yellow dwarf star", age: 4.6, size: "1.9885 to 10^30 kg", can_nova: false}
     let!(:star_2) {Star.create! name: "Proxima Centauri", star_type:"red dwarf star", age: 4.8, size: "2.428 to 10^29 kg", can_nova:false }

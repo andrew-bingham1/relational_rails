@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2023_03_22_001926) do
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "planet_type"
     t.integer "diameter"
     t.integer "num_moons"
     t.boolean "has_life"
