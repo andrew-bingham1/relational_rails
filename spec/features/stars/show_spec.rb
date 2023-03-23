@@ -5,6 +5,8 @@ RSpec.describe '/stars/:id', type: :feature do
     let!(:star_1) {Star.create! name: "Sol", star_type: "yellow dwarf star", age: 4.6, size: "1.9885 to 10^30 kg", can_nova: false}
     let!(:star_2) {Star.create! name: "Proxima Centauri", star_type:"red dwarf star", age: 4.8, size: "2.428 to 10^29 kg", can_nova:false }
     let!(:star_3) {Star.create! name: "Betelgeuse", star_type:"red supergiant", age: 0.0085, size: "2.188 to 10^31 kg", can_nova:true }
+    let!(:planet_1) {Planet.create! name:"Earth", planet_type:"rocky", diameter:7917, num_moons:1, has_life:true, star: star_1}
+    let!(:planet_2) {Planet.create! name:"Mars", planet_type:"rocky", diameter:4212, num_moons:2, has_life:false, star: star_1}
 
     it 'can display star attributes' do 
       visit "/stars/#{star_1.id}"
@@ -30,6 +32,17 @@ RSpec.describe '/stars/:id', type: :feature do
       expect(page).to have_content(star_3.age)
       expect(page).to have_content(star_3.size)
       expect(page).to have_content(star_3.can_nova)
+    end
+#User Story 7, Parent Child Count
+# [ ] done
+
+# As a visitor
+# When I visit a parent's show page
+# I see a count of the number of children associated with this parent
+    it 'can give a count of planets' do
+      visit "/stars/#{star_1.id}"
+
+      expect(page).to have_content("Number of Planets: #{star_1.planets.count}")
     end
   end
 end
