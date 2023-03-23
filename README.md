@@ -46,16 +46,12 @@ Then I see each Child that is associated with that Parent with each Child's attr
 
 
 User Story 6, Parent Index sorted by Most Recently Created 
-[ ] done
+[x] done
 
 As a visitor
 When I visit the parent index,
 I see that records are ordered by most recently created first
 And next to each of the records I see when it was created
-
-************time.now - 1*****************
-
-
 
 User Story 7, Parent Child Count
 [ ] done
