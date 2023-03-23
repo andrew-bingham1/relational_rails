@@ -13,7 +13,7 @@ RSpec.describe '/stars/:id/planets' do
 
     it 'can show a stars planets' do 
       visit "/stars/#{star_1.id}/planets"
-
+save_and_open_page
       expect(page).to have_content(planet_1.name)
       expect(page).to have_content(planet_1.planet_type)
       expect(page).to have_content(planet_1.diameter)
