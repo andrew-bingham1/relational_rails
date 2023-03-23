@@ -21,3 +21,5 @@ RSpec.describe '/planets/:id' do
       expect(page).to have_content(planet_1.num_moons)
       expect(page).to have_content(planet_1.has_life)
     end
+  end
+end
