@@ -1,6 +1,6 @@
 ## User Stories
 
-Interation #1
+Iteration #1
 
 
 User Story 1, Parent Index 
