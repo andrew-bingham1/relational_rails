@@ -84,7 +84,7 @@ Iteration #2
 
 CRUD
 
-User Story 11, Parent Creation [ ] done
+User Story 11, Parent Creation [x] done
 
 As a visitor
 When I visit the Parent Index page

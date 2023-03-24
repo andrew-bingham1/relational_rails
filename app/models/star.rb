@@ -6,6 +6,6 @@ class Star < ActiveRecord::Base
   end
 
   def planets_count
-    planets.size
+    planets.count
   end
 end
