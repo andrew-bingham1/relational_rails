@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/stars/new', to: 'stars#new'
   post 'stars', to: 'stars#create'
   get '/stars/:id', to: 'stars#show'
+  get '/stars/:id/edit', to: 'stars#edit'
+  patch '/stars/:id', to: 'stars#update'
   get '/planets', to: 'planets#index'
   get '/planets/:id', to: 'planets#show'
   get '/stars/:star_id/planets', to: 'star_planets#index'
