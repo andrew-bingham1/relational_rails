@@ -1,6 +1,8 @@
+<p><%=link_to "All Stars", "/stars"%> &nbsp <%=link_to "All Planets", "/planets"%></p>
 <h3> <%= @star.name %> </h3>
 <p> Type: <%= @star.star_type %></p>
 <p> Age: <%= @star.age %> billon years</p>
 <p> Mass: <%= @star.size %></p>
 <p> Could it Supernova: <%= @star.can_nova %></p>
 <p> Number of Planets: <%= @star.planets_count %></p>
+<p> <%=@star.name%>'s <%=link_to "Planets", "/stars/#{@star.id}/planets"%> 
