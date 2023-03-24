@@ -1,6 +1,6 @@
 ## User Stories
 
-Interation #1
+Iteration #1
 
 
 User Story 1, Parent Index 
@@ -84,7 +84,7 @@ Iteration #2
 
 CRUD
 
-User Story 11, Parent Creation [ ] done
+User Story 11, Parent Creation [x] done
 
 As a visitor
 When I visit the Parent Index page
