@@ -34,5 +34,11 @@ RSpec.describe '/stars', type: :feature do
 
       expect(page).to have_content("All Planets")
     end
+
+    it 'has a link on the Star index page to create a new Star' do
+      visit "/stars"
+
+      expect(page).to have_content("New Star")
+    end
   end
 end
