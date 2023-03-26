@@ -3,4 +3,8 @@ class StarPlanetsController < ApplicationController
     @star = Star.find(params[:star_id])
     @planets = @star.planets
   end
+
+  def new
+  end
+  
 end
