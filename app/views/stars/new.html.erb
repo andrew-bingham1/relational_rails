@@ -15,7 +15,7 @@
 <%= form.text_field :size%>
 <br>
 <br>
-<%= form.label :can_nova, "Can it supernova" %>
+<%= form.label :can_nova, "Can it supernova?" %>
 <%= form.collection_check_boxes(:can_nova, [[true, 'Yes'] ,[false, 'No']], :first, :last) do |b|
     b.label { b.check_box + b.text }
 end %>
