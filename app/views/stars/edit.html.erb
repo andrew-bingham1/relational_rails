@@ -1,4 +1,4 @@
-<%= form_with url: '/stars', method: :post, local: true do |form| %>
+<%= form_with url: "/stars/#{@star.id}", method: :patch, local: true do |form| %>
 <%= form.label :name, "Star Name" %>
 <%= form.text_field :name %>
 <br>
@@ -15,13 +15,13 @@
 <%= form.text_field :size%>
 <br>
 <br>
-<%= form.label :can_nova, "Can it supernova?" %>
+<%= form.label :can_nova, "Can it supernova" %>
 <%= form.collection_check_boxes(:can_nova, [[true, 'Yes'] ,[false, 'No']], :first, :last) do |b|
     b.label { b.check_box + b.text }
 end %>
 <br>
 <br>
-<%= form.submit "Create Star"%>
+<%= form.submit "Update Star"%>
 <% end %>
 
 

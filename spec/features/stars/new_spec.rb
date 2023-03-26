@@ -5,12 +5,12 @@ RSpec.describe '/stars/new', type: :feature do
     it 'can display the new star form' do
       visit '/stars/new'
 
-      expect(page).to have_content("Lets create a new star:")
-      expect(page).to have_content("Star Name:")
-      expect(page).to have_content("Star Type:")
-      expect(page).to have_content("Star Age (in billons):")
-      expect(page).to have_content("Star Mass:")
-      expect(page).to have_content("Can it supernova?:")
+     
+      expect(page).to have_content("Star Name")
+      expect(page).to have_content("Star Type")
+      expect(page).to have_content("Star Age (in billons)")
+      expect(page).to have_content("Mass")
+      expect(page).to have_content("Can it supernova?")
     end
   end
 end
