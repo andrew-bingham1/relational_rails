@@ -3,7 +3,7 @@
 <p> Type: <%= @star.star_type %></p>
 <p> Age: <%= @star.age %> billon years</p>
 <p> Mass: <%= @star.size %></p>
-<p> Could it supernova: <%= @star.can_nova %></p>
+<p> Can it supernova: <%= @star.can_nova %></p>
 <p> Number of Planets: <%= @star.planets_count %></p>
 <p> <%=@star.name%>'s <%=link_to "Planets", "/stars/#{@star.id}/planets"%> 
-<p> <a href="/stars/<%= @star.id %>/edit">Edit</a>
+<%= button_to "Edit #{@star.name}", "/stars/#{@star.id}/edit", method: :get %>

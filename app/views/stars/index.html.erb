@@ -4,5 +4,5 @@
 <% @stars.each do |star| %>
 <h3>Name: <%= star.name %></h3> 
 <p>Created at: <%=star.created_at%></p>
-<p><%=link_to "Go to #{star.name}'s page", "/stars/#{star.id}"%>
+<%= button_to "Edit #{star.name}", "/stars/#{star.id}/edit", method: :get %>
 <% end %>
