@@ -17,6 +17,18 @@ RSpec.describe '/stars/:id/planets/new' do
 
     end
 
-    it 'can fill in planet details'
+    it 'can fill in planet details' do
+      visit "/stars/#{star_1.id}/planets/new"
+
+      fill_in 'name', with: "Venus"
+      fill_in 'planet_type', with: "Rocky"
+      fill_in 'diameter', with: "7,521"
+      fill_in 'num_moons', with: "0"
+      select "false", :from => "has_life"
+      click_on "Create Planet"
+
+      expect(current_path).to eq("/stars/#{star_1.id}/planets")
+      expect(page).to have_content("Venus")
+    end
   end
 end
