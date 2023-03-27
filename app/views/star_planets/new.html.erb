@@ -1,0 +1,13 @@
+<%= form_with method: :post, local: true do |form| %>
+<%= form.label :name, "Planet Name" %>
+<%= form.text_field :name %> <br><br>
+<%= form.label :planet_type, "Planet Type" %>
+<%= form.text_field :planet_type %> <br><br>
+<%= form.label :diameter, "Planet's Diameter(in miles)" %>
+<%= form.text_field :diameter %><br><br>
+<%= form.label :num_moons, "Number of Moons" %>
+<%= form.text_field :num_moons %> <br><br>
+<%= form.label :has_life, "Does It Have Life" %><br>
+<%= form.select :has_life, [true, false] %> <br><br>
+<%= form.submit "Create Planet"%>
+<% end %>

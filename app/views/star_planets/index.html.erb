@@ -7,3 +7,4 @@
 <p>Number of Moons: <%= planet.num_moons %> </p> 
 <p>Life Present: <%= planet.has_life %> </p> 
 <% end %>
+<%= button_to "Create Planet", "/stars/#{@star.id}/planets/new", method: :get %>

@@ -8,7 +8,7 @@ RSpec.describe '/stars/:id/planets' do
 
     it 'can show a stars planets' do 
       visit "/stars/#{star_1.id}/planets"
-      
+
       expect(page).to have_content(planet_1.name)
       expect(page).to have_content(planet_1.planet_type)
       expect(page).to have_content(planet_1.diameter)
@@ -20,6 +20,14 @@ RSpec.describe '/stars/:id/planets' do
       expect(page).to have_content(planet_2.diameter)
       expect(page).to have_content(planet_2.num_moons)
       expect(page).to have_content(planet_2.has_life)
+    end
+
+    it 'can add planets to a star via button' do 
+      visit "/stars/#{star_1.id}/planets"
+
+      click_button "Create Planet"
+
+      expect(current_path).to eq("/stars/#{star_1.id}/planets/new")
     end
   end
 end

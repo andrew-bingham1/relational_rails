@@ -20,7 +20,7 @@ RSpec.describe '/stars/:id/edit', type: :feature do
       click_button "Edit Solar"
 
       fill_in 'name', with: "Sol"
-      check('Yes')
+      select "false", :from => "can_nova"
       click_button('Update Star')
 
       expect(current_path).to eq("/stars/#{star_1.id}")

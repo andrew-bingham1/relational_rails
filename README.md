@@ -98,7 +98,7 @@ a new parent record is created,
 and I am redirected to the Parent Index page where I see the new Parent displayed.
 
 
-User Story 12, Parent Update [ ] done
+User Story 12, Parent Update [x] done
 
 As a visitor
 When I visit a parent show page
@@ -112,7 +112,7 @@ the parent's info is updated,
 and I am redirected to the Parent's Show page where I see the parent's updated info
 
 
-User Story 13, Parent Child Creation [ ] done
+User Story 13, Parent Child Creation [x] done
 
 As a visitor
 When I visit a Parent Children Index page
