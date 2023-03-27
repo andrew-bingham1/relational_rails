@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/stars', to: 'stars#index'
   get '/stars/:star_id/planets', to: 'star_planets#index'
   get '/stars/:star_id/planets/new', to: 'star_planets#new'
+  post '/stars/:star_id/planets/new', to: 'star_planets#create'
   get '/stars/new', to: 'stars#new'
   post 'stars', to: 'stars#create'
   get '/stars/:id', to: 'stars#show'

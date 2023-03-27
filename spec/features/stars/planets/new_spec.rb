@@ -6,15 +6,17 @@ RSpec.describe '/stars/:id/planets/new' do
     let!(:planet_1) {Planet.create! name:"Earth", planet_type:"rocky", diameter:7917, num_moons:1, has_life:true, star: star_1}
     let!(:planet_2) {Planet.create! name:"Mars", planet_type:"rocky", diameter:4212, num_moons:2, has_life:false, star: star_1}
 
-    it 'can show a stars planets' do 
+    it 'can show a new planet page' do 
       visit "/stars/#{star_1.id}/planets/new"
 
       expect(page).to have_content("Planet Name")
       expect(page).to have_content("Planet Type")
-      expect(page).to have_content("Planets Diameter(in miles)")
+      expect(page).to have_content("Planet's Diameter(in miles)")
       expect(page).to have_content("Number of Moons")
       expect(page).to have_content("Does It Have Life")
 
     end
+
+    it 'can fill in planet details'
   end
 end
