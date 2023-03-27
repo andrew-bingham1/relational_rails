@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   patch '/stars/:id', to: 'stars#update'
   get '/planets', to: 'planets#index'
   get '/planets/:id', to: 'planets#show'
+  get '/planets/:id/edit', to: 'planets#edit'
+  patch '/planets/:id', to: 'planets#update'
 end
