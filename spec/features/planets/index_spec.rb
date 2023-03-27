@@ -15,11 +15,15 @@ RSpec.describe '/planets' do
       expect(page).to have_content(planet_1.num_moons)
       expect(page).to have_content(planet_1.has_life)
 
-      expect(page).to have_content(planet_2.name)
-      expect(page).to have_content(planet_2.planet_type)
-      expect(page).to have_content(planet_2.diameter)
-      expect(page).to have_content(planet_2.num_moons)
-      expect(page).to have_content(planet_2.has_life)
+      expect(page).to_not have_content(planet_2.name)
+      
+    
+      ###previous test where index showed all 
+      # expect(page).to have_content(planet_2.name)
+      # expect(page).to have_content(planet_2.planet_type)
+      # expect(page).to have_content(planet_2.diameter)
+      # expect(page).to have_content(planet_2.num_moons)
+      # expect(page).to have_content(planet_2.has_life)
     end
   end
 end
