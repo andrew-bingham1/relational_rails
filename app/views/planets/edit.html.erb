@@ -1,0 +1,13 @@
+<%= form_with url: "/planets/#{@planet.id}", method: :patch, local: true do |form| %>
+<%= form.label :name, "Planet Name" %>
+<%= form.text_field :name, value: @planet.name %> <br><br>
+<%= form.label :planet_type, "Planet Type" %>
+<%= form.text_field :planet_type, value: @planet.planet_type%> <br><br>
+<%= form.label :diameter, "Planet Diameter (in miles)" %>
+<%= form.text_field :diameter, value: @planet.diameter%> <br><br>
+<%= form.label :num_moons, "Number of Moons" %>
+<%= form.text_field :num_moons, value: @planet.num_moons%><br><br>
+<%= form.label :has_life, "Does It Have Life?" %>
+<%= form.select :has_life, [true, false] %> <br><br>
+<%= form.submit "Update Planet"%>
+<% end %>

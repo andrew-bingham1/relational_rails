@@ -1,6 +1,6 @@
 <p><%=link_to "All Stars", "/stars"%> &nbsp <%=link_to "All Planets", "/planets"%></p>
 <% @planets.each do |planet| %>
-<h2> <%=planet.name %></h2>
+<h2> Name: <%=link_to "#{planet.name}", "/planets/#{planet.id}"%></h2>
 <p>Planet Type: <%=planet.planet_type %> </p> 
 <p>Diameter: <%= planet.diameter %> miles </p> 
 <p>Number of Moons: <%= planet.num_moons %> </p> 
