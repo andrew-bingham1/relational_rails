@@ -43,8 +43,14 @@ RSpec.describe '/stars/:id/planets' do
     end
 #User Story 21
 
-    it 'can display records over a certain threshold' 
+    it 'can display records over a certain threshold' do 
+      visit "/stars/#{star_1.id}/planets"
 
-  
+      fill_in 'sort_num', with: 1
+      click_on "Update View"
+
+      expect(current_path).to eq("/stars/#{star_1.id}/planets")
+      expect(page).to_not have_content("Earth")
+    end
   end
 end

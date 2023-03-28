@@ -37,3 +37,4 @@ private
     params.permit(:name, :star_type, :age, :size, :can_nova)
   end
 end
+

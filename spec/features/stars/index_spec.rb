@@ -16,7 +16,7 @@ RSpec.describe '/stars', type: :feature do
       expect(page).to have_content(star_2.name)
       expect(page).to have_content(star_3.name)
     end
-
+#User Story 6
     it 'can order by most recently created' do
 
       expect(Star.order_by.first.name).to eq("Betelgeuse")
@@ -41,6 +41,17 @@ RSpec.describe '/stars', type: :feature do
       click_on "Create New Star"
 
       expect(current_path).to eq("/stars/new")
+    end
+
+# User Story 22
+    it 'can delete a star via button' do 
+      visit "/stars"
+
+      expect(page).to have_content("Sol")
+
+      click_button("Delete Sol")
+
+      expect(page).to_not have_content("Sol")
     end
   end
 end

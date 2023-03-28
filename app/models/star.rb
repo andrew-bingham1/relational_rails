@@ -13,16 +13,8 @@ class Star < ActiveRecord::Base
     planets.where("num_moons > ?", num)
   end
 
-  def sort_by(sort)
-    # require 'pry'; binding.pry
-    if sort == "alpha"
-      planets.order(name: :asc)
-
-    elsif sort == "num"
-      planets.num_moons_above(sort_num)
-    else
-      planets
-    end
+  def order_by_name
+      planets.order(name: :asc).to_a
   end
 
  

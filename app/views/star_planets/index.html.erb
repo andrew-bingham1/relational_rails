@@ -2,7 +2,11 @@
 <h1> <%=@star.name %> </h1>
 <%=link_to "Sort Alphabetically","/stars/#{@star.id}/planets?sort=alpha" %><br><br>
 
-
+<%= form_with url: "/stars/#{@star.id}/planets",params: {sort_num: :sort_num}, method: :get, local: true do |form| %>
+<%= form.label :sort_num, "Show Planets Above Given Number of Moons" %><br>
+<%= form.text_field :sort_num %>
+<%= form.submit "Update View"%>
+<% end %>
 
 <% @planets.each do |planet| %>
 <h2> <%=planet.name %></h2>
@@ -11,6 +15,6 @@
 <p>Number of Moons: <%= planet.num_moons %> </p> 
 <p>Life Present: <%= planet.has_life %> </p> 
 <%= button_to "Edit #{planet.name}", "/planets/#{planet.id}/edit", method: :get %><br>
-<%= button_to "Delete #{@planet.name}", "/planets/#{@planet.id}", method: :delete %>
+<%= button_to "Delete #{planet.name}", "/planets/#{planet.id}", method: :delete %>
 <% end %>
 <%= button_to "Create Planet", "/stars/#{@star.id}/planets/new", method: :get %>
