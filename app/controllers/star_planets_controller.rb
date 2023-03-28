@@ -1,7 +1,7 @@
 class StarPlanetsController < ApplicationController
   def index
     @star = Star.find(params[:star_id])
-    @planets = @star.planets
+    @planets = @star.sort_by_name(params[:sort])
   end
 
   def new
@@ -13,6 +13,7 @@ class StarPlanetsController < ApplicationController
     redirect_to "/stars/#{@star.id}/planets"
   end
 
+private
   def planet_params
     params.permit(:name, :planet_type, :diameter, :num_moons, :has_life)
   end

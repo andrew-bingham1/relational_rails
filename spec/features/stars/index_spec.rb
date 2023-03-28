@@ -38,7 +38,9 @@ RSpec.describe '/stars', type: :feature do
     it 'has a link on the Star index page to create a new Star' do
       visit "/stars"
 
-      expect(page).to have_content("New Star")
+      click_on "Create New Star"
+
+      expect(current_path).to eq("/stars/new")
     end
   end
 end
