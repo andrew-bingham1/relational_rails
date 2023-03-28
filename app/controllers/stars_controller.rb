@@ -25,6 +25,7 @@ class StarsController < ApplicationController
     redirect_to "/stars/#{star.id}"
   end
 
+private
   def star_params
     params.permit(:name, :star_type, :age, :size, :can_nova)
   end

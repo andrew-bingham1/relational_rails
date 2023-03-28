@@ -17,7 +17,8 @@ class PlanetsController < ApplicationController
     planet.update(planet_params)
     redirect_to "/planets/#{planet.id}"
   end
-
+  
+private
   def planet_params
     params.permit(:name, :planet_type, :diameter, :num_moons, :has_life)
   end
