@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe '/stars/:id/planets' do
   describe 'as a visitor when vist "/stars/:id/planets" I see an index of all planets related to that star' do
     let!(:star_1) {Star.create! name: "Sol", star_type: "yellow dwarf", age: 4.6, size: "1.9885 to 10^30 kg", can_nova: false}
-    let!(:planet_2) {Planet.create! name:"Mars", planet_type:"rocky", diameter:4212, num_moons:2, has_life:false, star: star_1}
-    let!(:planet_1) {Planet.create! name:"Earth", planet_type:"rocky", diameter:7917, num_moons:1, has_life:true, star: star_1}
-
+    let!(:planet_2) {Planet.create! name:"Mars", planet_type:"Rocky", diameter:4212, num_moons:2, has_life:false, star: star_1}
+    let!(:planet_1) {Planet.create! name:"Earth", planet_type:"Rocky", diameter:7917, num_moons:1, has_life:true, star: star_1}
+    let!(:planet_3) {Planet.create! name:"Jupiter", planet_type: "Gas Giant", diameter: 86881, num_moons:92, has_life:false, star:star_1}
     it 'can show a stars planets' do 
       visit "/stars/#{star_1.id}/planets"
 
@@ -40,6 +40,17 @@ RSpec.describe '/stars/:id/planets' do
       expect(current_path).to eq("/stars/#{star_1.id}/planets")
 
       expect(planet_1.name).to appear_before(planet_2.name)
+    end
+#User Story 21
+
+    it 'can display records over a certain threshold' do 
+      visit "/stars/#{star_1.id}/planets"
+
+      fill_in 'sort_num', with: 1
+      click_on "Update View"
+
+      expect(current_path).to eq("/stars/#{star_1.id}/planets")
+      expect(page).to_not have_content("Earth")
     end
   end
 end

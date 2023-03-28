@@ -56,5 +56,15 @@ RSpec.describe '/stars/:id', type: :feature do
 
       expect(page).to have_content("Sol's Planets")
     end
+
+# User Story 19
+    it 'can delete stars via button' do
+      visit "/stars/#{star_1.id}"
+
+      click_button("Delete Sol")
+
+      expect(current_path).to eq('/stars')
+      expect(page).to_not have_content('Sol')
+    end
   end
 end

@@ -12,4 +12,4 @@ star_2 = Star.create! name: "Proxima Centauri", star_type:"red dwarf", age: 4.8,
 star_3 = Star.create! name: "Betelgeuse", star_type:"red supergiant", age: 0.0085, size: "2.188 to 10^31 kg", can_nova:true 
 planet_2 = Planet.create! name:"Mars", planet_type:"rocky", diameter:4212, num_moons:2, has_life:false, star: star_1
 planet_1= Planet.create! name:"Earth", planet_type:"rocky", diameter:7917, num_moons:1, has_life:true, star: star_1
-
+plaent_3= Planet.create! name:"Jupiter", planet_type: "Gas Giant", diameter: 86881, num_moons:92, has_life:false, star:star_1

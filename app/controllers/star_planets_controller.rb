@@ -1,7 +1,14 @@
 class StarPlanetsController < ApplicationController
   def index
     @star = Star.find(params[:star_id])
-    @planets = @star.sort_by_name(params[:sort])
+    if params[:sort] == "alpha"
+      @planets = @star.order_by_name
+    elsif params[:sort_num].present?
+      num = params[:sort_num]
+      @planets = @star.num_moons_above(num)
+    else
+      @planets = @star.planets
+    end
   end
 
   def new
