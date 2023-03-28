@@ -187,7 +187,7 @@ Then a 'DELETE' request is sent to '/parents/:id',
 the parent is deleted, and all child records are deleted
 and I am redirected to the parent index page where I no longer see this parent
 
-User Story 20, Child Delete [] done
+User Story 20, Child Delete [x] done
 
 As a visitor
 When I visit a child show page
@@ -198,7 +198,7 @@ the child is deleted,
 and I am redirected to the child index page where I no longer see this child
 ActiveRecord
 
-User Story 21, Display Records Over a Given Threshold [] done
+User Story 21, Display Records Over a Given Threshold [x] done
 
 As a visitor
 When I visit the Parent's children Index Page
@@ -207,7 +207,7 @@ When I input a number value and click the submit button that reads 'Only return 
 Then I am brought back to the current index page with only the records that meet that threshold shown.
 Usability
 
-User Story 22, Parent Delete From Parent Index Page [] done
+User Story 22, Parent Delete From Parent Index Page [x] done
 
 As a visitor
 When I visit the parent index page
@@ -215,7 +215,7 @@ Next to every parent, I see a link to delete that parent
 When I click the link
 I am returned to the Parent Index Page where I no longer see that parent
 
-User Story 23, Child Delete From Childs Index Page [] done
+User Story 23, Child Delete From Childs Index Page [x] done
 
 As a visitor
 When I visit the `child_table_name` index page or a parent `child_table_name` index page

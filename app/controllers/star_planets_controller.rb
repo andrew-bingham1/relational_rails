@@ -1,7 +1,7 @@
 class StarPlanetsController < ApplicationController
   def index
     @star = Star.find(params[:star_id])
-    @planets = @star.sort_by_name(params[:sort])
+    @planets = @star.sort_by(params[:sort])
   end
 
   def new

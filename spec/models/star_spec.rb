@@ -31,8 +31,8 @@ describe Star, type: :model do
 
       it 'can sort by name' do
          
-         expect(star_1.sort_by_name("x")).to eq([planet_2,planet_1])
-         expect(star_1.sort_by_name("alpha")).to eq([planet_1,planet_2])
+         expect(star_1.sort_by("x")).to eq([planet_2,planet_1])
+         expect(star_1.sort_by("alpha")).to eq([planet_1,planet_2])
       end
 
 
