@@ -5,4 +5,5 @@
 <p>Diameter: <%= planet.diameter %> miles </p> 
 <p>Number of Moons: <%= planet.num_moons %> </p> 
 <p>Life Present: <%= planet.has_life %> </p> 
+<%= button_to "Edit #{planet.name}", "/planets/#{planet.id}/edit", method: :get %>
 <% end %>
