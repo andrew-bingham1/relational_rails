@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   get '/planets/:id', to: 'planets#show'
   get '/planets/:id/edit', to: 'planets#edit'
   patch '/planets/:id', to: 'planets#update'
+  delete '/planets/:id', to: 'planets#destroy'
 end
