@@ -156,7 +156,7 @@ I'm taken back to the Parent's children Index Page where I see all of the parent
 Usability
 
 
-User Story 17, Parent Update From Parent Index Page [ ] done
+User Story 17, Parent Update From Parent Index Page [x] done
 
 As a visitor
 When I visit the parent index page
@@ -165,7 +165,7 @@ When I click the link
 I should be taken to that parent's edit page where I can update its information just like in User Story 12
 
 
-User Story 18, Child Update From Childs Index Page [ ] done
+User Story 18, Child Update From Childs Index Page [x] done
 
 As a visitor
 When I visit the `child_table_name` index page or a parent `child_table_name` index page
