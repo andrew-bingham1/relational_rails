@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   get '/stars/:id', to: 'stars#show'
   get '/stars/:id/edit', to: 'stars#edit'
   patch '/stars/:id', to: 'stars#update'
+  delete '/stars/:id', to: 'stars#destroy'
   get '/planets', to: 'planets#index'
   get '/planets/:id', to: 'planets#show'
   get '/planets/:id/edit', to: 'planets#edit'
   patch '/planets/:id', to: 'planets#update'
+  delete '/planets/:id', to: 'planets#destroy'
 end

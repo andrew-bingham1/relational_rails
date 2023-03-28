@@ -17,6 +17,11 @@ class PlanetsController < ApplicationController
     planet.update(planet_params)
     redirect_to "/planets/#{planet.id}"
   end
+
+  def destroy
+    Planet.destroy(params[:id])
+    redirect_to '/planets'
+  end
   
 private
   def planet_params
