@@ -25,6 +25,13 @@ class StarsController < ApplicationController
     redirect_to "/stars/#{star.id}"
   end
 
+  def destroy
+    star = Star.find(params[:id])
+    star.planets.destroy_all
+    star.destroy
+    redirect_to '/stars'
+  end
+
 private
   def star_params
     params.permit(:name, :star_type, :age, :size, :can_nova)
