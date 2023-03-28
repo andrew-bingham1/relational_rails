@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe '/stars/new', type: :feature do
   describe 'can create a new parent' do
+
+# User Story 11
     it 'can display the new star form' do
       visit '/stars/new'
 

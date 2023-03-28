@@ -177,6 +177,8 @@ Next to every child, I see a link to edit that child's info
 When I click the link
 I should be taken to that `child_table_name` edit page where I can update its information just like in User Story 14
 
+-------
+
 Iteration #3
 
 CRUD
