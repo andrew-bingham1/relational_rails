@@ -6,5 +6,5 @@
 <p> Can it supernova: <%= @star.can_nova %></p>
 <p> Number of Planets: <%= @star.planets_count %></p>
 <p> <%=@star.name%>'s <%=link_to "Planets", "/stars/#{@star.id}/planets"%> 
-<%= button_to "Edit #{@star.name}", "/stars/#{@star.id}/edit", method: :get %>
+<%= button_to "Edit #{@star.name}", "/stars/#{@star.id}/edit", method: :get %><br>
 <%= button_to "Delete #{@star.name}", "/stars/#{@star.id}", method: :delete %>
